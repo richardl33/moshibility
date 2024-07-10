@@ -17,6 +17,7 @@ import {
   useDimensions,
   useDeviceOrientation,
 } from "@react-native-community/hooks";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   const handlPress = () => console.log("Text pressed");
@@ -27,45 +28,56 @@ export default function App() {
   const orientation = useDeviceOrientation();
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View
-        style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
-      ></View>
-      {/* <Text numberOfLines={1} onPress={handlPress}>
-        Hello World!
-      </Text>
-      <Button
-        title="Alert Button"
-        onPress={() =>
-          Alert.alert("My title", "My message", [
-            {
-              text: "Yes",
-              onPress: () => console.log("Yes"),
-            },
-            {
-              text: "No",
-              onPress: () => console.log("No"),
-            },
-          ])
-        }
-      />
-      <Button
-        title="Prompt Button"
-        onPress={() =>
-          Alert.prompt("My title", "My message", (text) => console.log(text))
-        }
-      />
-      <TouchableOpacity onPress={() => console.log("Image Tapped")}>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/seed/picsum/200/300",
-          }}
-        />
-      </TouchableOpacity>
-      <StatusBar style="auto" /> */}
-    </SafeAreaView>
+    <WelcomeScreen />
+    // <View
+    //   style={{
+    //     backgroundColor: "#fff",
+    //     flex: 1,
+    //   }}
+    // >
+    //   <View style={{ backgroundColor: "dodgerblue", flex: 1 }} />
+    //   <View style={{ backgroundColor: "gold", flex: 1 }} />
+    //   <View style={{ backgroundColor: "tomato", flex: 1 }} />
+    // </View>
+    // <SafeAreaView style={styles.container}>
+    //   <View
+    //     style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
+    //   ></View>
+    //   <Text numberOfLines={1} onPress={handlPress}>
+    //     Hello World!
+    //   </Text>
+    //   <Button
+    //     title="Alert Button"
+    //     onPress={() =>
+    //       Alert.alert("My title", "My message", [
+    //         {
+    //           text: "Yes",
+    //           onPress: () => console.log("Yes"),
+    //         },
+    //         {
+    //           text: "No",
+    //           onPress: () => console.log("No"),
+    //         },
+    //       ])
+    //     }
+    //   />
+    //   <Button
+    //     title="Prompt Button"
+    //     onPress={() =>
+    //       Alert.prompt("My title", "My message", (text) => console.log(text))
+    //     }
+    //   />
+    //   <TouchableOpacity onPress={() => console.log("Image Tapped")}>
+    //     <Image
+    //       source={{
+    //         width: 200,
+    //         height: 300,
+    //         uri: "https://picsum.photos/seed/picsum/200/300",
+    //       }}
+    //     />
+    //   </TouchableOpacity>
+    //   <StatusBar style="auto" />
+    // </SafeAreaView>
   );
 }
 
