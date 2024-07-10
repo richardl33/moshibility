@@ -10,13 +10,20 @@ import {
   Alert,
   Platform,
   StatusBar,
+  View,
+  Dimensions,
 } from "react-native";
 
 export default function App() {
   const handlPress = () => console.log("Text pressed");
+  console.log(Dimensions.get("screen"));
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlPress}>
+      <View
+        style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
+      ></View>
+      {/* <Text numberOfLines={1} onPress={handlPress}>
         Hello World!
       </Text>
       <Button
@@ -49,7 +56,7 @@ export default function App() {
           }}
         />
       </TouchableOpacity>
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
 }
