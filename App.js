@@ -4,8 +4,11 @@ import {
   Text,
   TouchableWithoutFeedback,
   TouchableOpacity,
+  TouchableHighlight,
   Image,
   SafeAreaView,
+  Button,
+  Alert,
 } from "react-native";
 
 export default function App() {
@@ -15,6 +18,27 @@ export default function App() {
       <Text numberOfLines={1} onPress={handlPress}>
         Hello World!
       </Text>
+      <Button
+        title="Alert Button"
+        onPress={() =>
+          Alert.alert("My title", "My message", [
+            {
+              text: "Yes",
+              onPress: () => console.log("Yes"),
+            },
+            {
+              text: "No",
+              onPress: () => console.log("No"),
+            },
+          ])
+        }
+      />
+      <Button
+        title="Prompt Button"
+        onPress={() =>
+          Alert.prompt("My title", "My message", (text) => console.log(text))
+        }
+      />
       <TouchableOpacity onPress={() => console.log("Image Tapped")}>
         <Image
           source={{
