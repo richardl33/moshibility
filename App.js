@@ -13,10 +13,18 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
   const handlPress = () => console.log("Text pressed");
-  console.log(Dimensions.get("screen"));
+
+  // console.log(Dimensions.get("screen"));
+  console.log(useDeviceOrientation());
+
+  const orientation = useDeviceOrientation();
 
   return (
     <SafeAreaView style={styles.container}>
